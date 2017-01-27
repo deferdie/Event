@@ -97,4 +97,11 @@ class DeferdieEvent
 		$event->delete();
 	}
 
+	public function updateStatus($id)
+	{
+		$event = $this->event->where('id', $id)->first();
+		$event->active = ($update->active == 0) ? 1 : 0;
+		$event->save();
+	}
+
 }
