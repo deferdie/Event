@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use deferdie\Events\DeferdieEvent;
+use deferdie\Event\Model\EventModel;
 
 class EventController extends Controller
 {
@@ -21,12 +22,12 @@ class EventController extends Controller
 
     public function __construct()
     {
-        $this->event = new DeferdieEvent(new \App\Event);
+        $this->event = new DeferdieEvent(new EventModel);
     }
 
     public function index()
     {
-        return view('Events::events',[
+        return view('Event::events',[
             'events' => $this->event->all(0)
         ]);
     }
