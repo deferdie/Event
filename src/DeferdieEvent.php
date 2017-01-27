@@ -3,7 +3,7 @@
 namespace deferdie\Event;
 
 use Illuminate\Http\Request;
-use \App\Event;
+use deferdie\Event\Model\EventModel;
 
 class DeferdieEvent
 {
