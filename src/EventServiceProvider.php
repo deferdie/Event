@@ -14,10 +14,6 @@ class EventServiceProvider extends ServiceProvider
 {
 	public function boot()
 	{
-		$this->loadRoutesFrom(__DIR__.'/Http/routes.php');
-
-		$this->loadViewsFrom(realpath(__DIR__.'/../views'), 'Event');
-
 		$this->loadMigrationsFrom(__DIR__.'/Migrations');
 
 		$this->setupRoutes($this->app->router);
