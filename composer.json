@@ -1,0 +1,21 @@
+{
+    "name": "deferdie/event",
+    "description": "Event management for Laravel 5",
+    "license": "MIT",
+    "keywords" : ["Event"],
+    "authors": [
+        {
+            "name": "Ferdie De Oliveira",
+            "email": "deferdie@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.2"
+    },
+    "autoload" : {
+      "psr-4" : {
+          "deferdie\\Event\\": "src/"
+        }
+    }
+}
