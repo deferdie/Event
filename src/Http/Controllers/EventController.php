@@ -1,8 +1,8 @@
-<?php 
+<?php
 
-namespace deferdie\Events\Http\Controllers;
+namespace deferdie\Event\Http\Controllers;
 /**
- * 
+ *
  * @author Ferdie De Oliveira <deferdie@gmail.com>
  */
 
@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use deferdie\Events\DeferdieEvent;
 
 class EventController extends Controller
-{   
+{
     /**
      * The Tasf event class
      * @var Tasf event class
@@ -53,7 +53,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = $this->event->show($id, 2);
-        
+
         return view('backend.events.edit', ['event' => $event]);
     }
 

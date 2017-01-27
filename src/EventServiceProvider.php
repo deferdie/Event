@@ -4,7 +4,7 @@
  * @author Ferdie De Oliveira <deferdie@gmail.com>
  */
 
-namespace deferdie\Events;
+namespace deferdie\Event;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
@@ -16,7 +16,7 @@ class EventServiceProvider extends ServiceProvider
 	{
 		$this->loadRoutesFrom(__DIR__.'/Http/routes.php');
 
-		$this->loadViewsFrom(realpath(__DIR__.'/../views'), 'Events');
+		$this->loadViewsFrom(realpath(__DIR__.'/../views'), 'Event');
 
 		$this->loadMigrationsFrom(__DIR__.'/Migrations');
 
@@ -33,7 +33,7 @@ class EventServiceProvider extends ServiceProvider
 	 */
 	public function setupRoutes(Router $router)
 	{
-		$router->group(['namespace' => 'deferdie\Events\Http\Controllers'], function($router)
+		$router->group(['namespace' => 'deferdie\Event\Http\Controllers'], function($router)
 		{
 			require __DIR__.'/Http/routes.php';
 		});

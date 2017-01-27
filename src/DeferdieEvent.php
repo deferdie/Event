@@ -1,6 +1,6 @@
 <?php
 
-namespace deferdie\Events;
+namespace deferdie\Event;
 
 use Illuminate\Http\Request;
 use \App\Event;
@@ -71,12 +71,12 @@ class DeferdieEvent
 	 * Update an event
 	 * @param  EventID $event  The event ID
 	 * @param  The Request $update The update
-	 * @return Success 
+	 * @return Success
 	 */
 	public function update($event, $update)
 	{
 		$eventToUpdate = $this->event->where('id', $event)->firstOrFail();
-		
+
 		$eventToUpdate->title = $update->eventTitle;
 		$eventToUpdate->date = $update->eventDate;
 		$eventToUpdate->description = $update->description;
