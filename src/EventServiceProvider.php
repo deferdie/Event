@@ -8,7 +8,7 @@ namespace deferdie\Event;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
-use \App\Event;
+use deferdie\Event\Model\EventModel;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -22,7 +22,7 @@ class EventServiceProvider extends ServiceProvider
 
 		$this->setupRoutes($this->app->router);
 
-		$e = new DeferdieEvent(new Event);
+		$e = new DeferdieEvent(new EventModel);
 	}
 
 	/**
