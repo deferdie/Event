@@ -27,21 +27,21 @@ class EventController extends Controller
 
     public function index()
     {
-        return view('Event::events',[
+        return view('Event::public.events',[
             'events' => $this->event->all(0)
         ]);
     }
 
     public function indexBackend()
     {
-        return view('backend.events.index',[
+        return view('Event::backend.events.index',[
             'events' => $this->event->all(2)
         ]);
     }
 
     public function create()
     {
-        return view('backend.events.create');
+        return view('Event::backend.events.create');
     }
 
     public function store(Request $event)
@@ -55,7 +55,7 @@ class EventController extends Controller
     {
         $event = $this->event->show($id, 2);
 
-        return view('backend.events.edit', ['event' => $event]);
+        return view('Event::backend.events.edit', ['event' => $event]);
     }
 
     public function save($id, Request $request)
