@@ -9,7 +9,7 @@ namespace deferdie\Event\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use deferdie\Events\DeferdieEvent;
+use deferdie\Event\DeferdieEvent;
 use deferdie\Event\Model\EventModel;
 
 class EventController extends Controller
