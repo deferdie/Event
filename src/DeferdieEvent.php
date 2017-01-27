@@ -13,7 +13,7 @@ class DeferdieEvent
 	 */
 	private $event;
 
-	public function __construct(Event $e)
+	public function __construct(EventModel $e)
 	{
 		$this->event = $e;
 	}
